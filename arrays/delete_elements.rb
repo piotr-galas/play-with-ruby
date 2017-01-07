@@ -1,34 +1,11 @@
-# require './helper'
-#
-# start 'alphabet.select!{|element_value| element_value == a or element_value == d}'
-# alphabet = ['a','b','c','d', 'e']
-# puts alphabet.select!{|element_value| element_value == 'a' or element_value == 'd'}.to_s
-# puts alphabet.to_s
-# stop
-#
-#
-# start 'alphabet.delete(d)'
-# alphabet = ['a','b','c','d', 'e']
-# puts alphabet.delete('d').to_s
-# puts alphabet.to_s
-# stop
-#
-#
-# start 'alphabet.delete_at(3)'
-# alphabet = ['a','b','c','d', 'e']
-# puts alphabet.delete_at(3).to_s
-# puts alphabet.to_s
-# stop
-#
-#
-# start 'alphabet.delete_if{|element_value| element_value == a})'
-# alphabet = ['a','b','c','d', 'e']
-# puts alphabet.delete_if{|element_value| element_value == 'a'}.to_s
-# puts alphabet.to_s
-# stop
-#
-# start 'alphabet.drop(3)'
-# alphabet = ['a','b','c','d', 'e']
-# puts alphabet.drop(3).to_s
-# puts alphabet.to_s
-# stop
+require './helper'
+
+@alphabet = ['a','b','c','d', 'e']
+
+
+print_to_console(@alphabet.delete('d'), 'alphabet.delete(d)')
+print_to_console(@alphabet.delete_at(3), 'alphabet.delete_at(3)')
+print_to_console(@alphabet.delete_if{|element_value| element_value == 'a'}, 'alphabet.delete_if{|element_value| element_value == a})')
+print_to_console(@alphabet.reject{|element_value| element_value == 'a'}, 'alphabet.reject{|element_value| element_value == a})')
+print_to_console(@alphabet.reject!{|element_value| element_value == 'a'}, 'alphabet.reject!{|element_value| element_value == a})')
+print_to_console(@alphabet.reject, 'alphabet.reject')
