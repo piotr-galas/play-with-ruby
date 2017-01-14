@@ -4,6 +4,7 @@ require './lib/failure'
 class Product
   def create
     result = Products::CreateOne.new(:car).call
+
     result.wrong_name { |params| puts params}
     result.wrong_length {  puts 'params'}
     result.wrong_notification {|message, picture, something| puts [message, picture.size, something].to_s}
